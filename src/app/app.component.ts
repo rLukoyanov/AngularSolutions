@@ -7,15 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'first-assigmant-solution';
-  clicks = ['cliked'];
+  log = [1];
   hide = true;
   blue = false;
 
   onToggleDetails() {
     this.hide = !this.hide;
-    this.clicks.push('cliked');
+    this.log.push(this.log.length + 1);
 
-    if (this.clicks.length >= 5) {
+    if (this.log.length >= 5) {
       this.blue = true;
     }
   }

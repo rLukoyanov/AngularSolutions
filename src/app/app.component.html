@@ -1,3 +1,5 @@
 <button (click)="onToggleDetails()">Display details</button>
 <p *ngIf="hide">Secret Password = tuna</p>
-<p *ngFor="let click of clicks" [ngClass]="{ blue: blue }">Clicked</p>
+<p *ngFor="let click of log; let i = index" [ngClass]="{ blue: click >= 5 ? blue : '' }">
+  {{ click }}
+</p>
